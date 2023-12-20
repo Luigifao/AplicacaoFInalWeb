@@ -1,0 +1,1 @@
+A aplicação web se trata de um protótipo de um sistema de aulas assíncronas gravadas dentro da sala de aula de uma escola de ensino, link para apresentação da aplicação no Youtube: https://youtu.be/mnk7T_wEMA4 
