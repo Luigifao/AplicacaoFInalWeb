@@ -1,0 +1,8 @@
+*{
+    --cor-azul: #466C81F7;
+    --cor-gradiente: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(139,62,183,1) 35%, rgba(44,152,214,1) 100%);
+    --cor-branca: #fff;
+    --cor-azul-escuro: #2C98D6;
+    --fonte-titulo: 'Montserrat', sans-serif;
+    
+}

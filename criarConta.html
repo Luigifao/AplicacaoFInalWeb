@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <script src="JS/criarLogin.js" defer></script>
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+
+<body>
+    <section id="create">
+        <form action="" id="form-login2">
+            <h1>Crie sua conta</h1>
+
+            <div id="msgError"></div>
+            <div id="msgSuccess"></div>
+
+            <div class="inputbox">
+                <icon-icon name="mail-outline"></icon-icon>
+                <input id="criarUsuario"type="text">
+                <label for="" id="labelUsuario">Nome de Usuário</label>
+            </div>
+            <div class="inputbox">
+                <icon-icon name="lock-closed-outline"></icon-icon>
+                <input id="criarSenha"type="password" required>
+                <label for="" id="labelSenha">Senha</label>
+            </div>
+            <div class="inputbox">
+                <icon-icon name="lock-closed-outline"></icon-icon>
+                <input id="confirmSenha"type="password" required>
+                <label for="" id="labelConfirmSenha">Confirme sua senha</label>
+            </div>
+            <button id="criar">Criar conta</button>
+            
+
+        </form>
+
+    </section>
+</body>
+
+</html>
