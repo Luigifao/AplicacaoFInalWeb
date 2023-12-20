@@ -1,46 +1,89 @@
-function clique_de_btn_camera(){
-    var botao = document.getElementById("botao-cam");
-    botao.style.backgroundColor = 'red';
-    botao.innerHTML = 'usando';
-    
+// =====Aluno home=====
+function redirectTo(page) {
+
+    window.location.href = page;
 }
-
-function clique_de_btn_mic(){
-    var botao = document.getElementById("botao-mic");
-    botao.style.backgroundColor = 'red';
-    botao.innerHTML = 'usando';
-    
-}
-
-// script para o accordion
-const accordion_item = document.querySelectorAll(".accordion_item");
-
-accordion_item.forEach((item) => {
-  const accordion_header_item = item.querySelector(".accordion_header");
-
-  accordion_header_item.addEventListener("click", () => {
-    const accordion_content_item = item.querySelector(".accordion_content");
-
-    const item_actived = document.querySelector(".active");
-
-    VerifyActive(item, accordion_content_item, item_actived);
-  });
+//=====AlunoMaterias=====
+document.addEventListener('DOMContentLoaded', function () {
+    var materiaButtons = document.querySelectorAll('.materias-conteiner button');
+    materiaButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            
+            var materiaNome = button.innerText;
+        });
+    });
 });
+//=====Matéria=====
+// script.js
 
-function VerifyActive(item, content, content_actived) {
-  const icon_item = item.querySelector(".icon");
-  const icon_item_active = document.querySelectorAll(".icon");
+document.addEventListener('DOMContentLoaded', function () {
+    
+    var materiaButtons = document.querySelectorAll('.menu-group .menu-button');
+    
+    materiaButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+             var materiaNome = button.innerText;
+        });
+    });
+    var aulaButtons = document.querySelectorAll('.aula .menu-button');
+    
+    aulaButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var aulaNome = button.innerText;
+        });
+    });
+});
+//=====Notificacoes=====
+// script.js
 
-  icon_item_active.forEach((item) => (item.innerHTML = "+"));
+document.addEventListener('DOMContentLoaded', function () {
+    var imagensNoticias = document.querySelectorAll('.feed-noticias img');
 
-  if (content_actived) {
-    content_actived.style.height = 0;
-    content_actived.classList.remove("active");
-  }
+    imagensNoticias.forEach(function (imagem) {
+        imagem.addEventListener('click', function () {
+            var noticiaAlt = imagem.alt;
+            alert('Notícia: ' + noticiaAlt);
+        });
+    });
+});
+//=====SendQTN=====
+function mostrarDuvidas(materia, professor) {
+    var menuDuvidas = document.getElementById('menuDuvidas');
+    var duvidasContainer = document.getElementById('duvidasContainer');
+    var materiaNome = document.getElementById('materiaNome');
+    var professorNome = document.getElementById('professorNome');
 
-  if (content !== content_actived) {
-    icon_item.innerHTML = "-";
-    content.classList.add("active");
-    content.style.height = content.scrollHeight + 10 + "px";
-  }
+    menuDuvidas.style.display = 'none';
+    duvidasContainer.style.display = 'block';
+    materiaNome.textContent = 'Matéria: ' + materia;
+    professorNome.textContent = 'Professor(a): ' + professor;
 }
+
+function enviarDuvida() {
+    var campoDuvida = document.getElementById('campoDuvida').value;
+    alert('Dúvida enviada: ' + campoDuvida);
+    
+}
+//=====VerifyMissings=====
+function mostrarFaltas() {
+    var faltasContainer = document.getElementById('faltasContainer');
+    if (faltasContainer.style.display === 'none' || faltasContainer.style.display === '') {
+        faltasContainer.style.display = 'block';
+    } else {
+        faltasContainer.style.display = 'none';
+    }
+}
+function mostrarMenuDuvidas() {
+    var menuDuvidas = document.getElementById('menuDuvidas');
+    var duvidasContainer = document.getElementById('duvidasContainer');
+
+    if (menuDuvidas.style.display === 'none' || menuDuvidas.style.display === '') {
+        menuDuvidas.style.display = 'block';
+        duvidasContainer.style.display = 'none';
+    } else {
+        menuDuvidas.style.display = 'none';
+    }
+}
+
+
+
